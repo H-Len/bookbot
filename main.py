@@ -1,5 +1,5 @@
 def main():
-    book_path = "github.com/H-Len/bookbot/books/frankenstein.txt"
+    book_path = "books/frankenstein.txt"
     text = get_book_text(book_path)
     # print(text)
     print(get_word_count(book_path))
