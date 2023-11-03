@@ -1,7 +1,7 @@
 def main():
     book_path = "books/frankenstein.txt"
     text = get_book_text(book_path)
-    # print(text)
+    print("--- Begin report of books/frankenstein.txt ---")
     print(get_word_count(book_path))
     print(get_report(get_letter_count(book_path)))
 
@@ -36,8 +36,15 @@ def get_report(letter_count):
     report.append("--- Begin report of books/frankenstein.txt ---")
     for entry in letter_count:
         if entry.isalpha():
-            report.append(f"The {entry} character was found {letter_count[entry]} times")
-    return report
+            # print(f"The {entry} character was found {letter_count[entry]} times")
+            report.append(f"The {entry} character was found {letter_count[entry]}times")
+            print(f"The {entry} character was found {letter_count[entry]} times")
+    report.sort()
+    # for entry in letter_count:
+    #     if entry.isalpha:
+    #         print((f"The {entry} character was found {letter_count[entry]} times"))
+    return "--- End report ---"
+
 def get_book_text(path):
     with open(path) as f:
         return f.read()
